@@ -1,0 +1,10 @@
+name: ReferMeBro
+main: cosmicnebula200\ReferMeBro\ReferMeBro
+api: 4.0.0
+version: 1.0.0
+author: cosmicnebula200
+
+permissions:
+  refermebro.command.refer:
+    default: true
+    description: With this permission the player can use the refer command

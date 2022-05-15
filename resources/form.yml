@@ -1,0 +1,12 @@
+refer:
+  title: "&l&dReferMeBro"
+  content: "&bEnter a referral code which you received from a friend. Close the form if you do not have a referral code"
+
+refer-command:
+  title: "&l&dReferMeBro"
+  enter: "&l&dEnter"
+  view: "&l&dView"
+
+view-form:
+  title: "&l&dReferMeBro"
+  content: "&l&aYour Referral code is &6{CODE}"

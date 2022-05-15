@@ -1,0 +1,16 @@
+# The configuration for each message of ReferMeBro
+
+# Use & instead of double S for a quicker colorizing of texts
+
+prefix: '&l&d[ReferMeBro]'
+
+# seperator seperates the message from the prefix
+# Format looks like:
+# {prefix} {seperator} {message}
+# the spaces are automatically added so you dont have to worry about that too :))
+seperator: '&e=> &b'
+
+messages:
+  referred-user: "You have referred another user, your total refers are {REFERS}"
+  refer-use: "You have used a referral code and received your rewards"
+  invalid-code: "The code you have used is invalid"
