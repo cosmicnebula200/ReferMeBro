@@ -27,7 +27,7 @@ class EventListener implements Listener
         ReferMeBro::getInstance()->getScheduler()->scheduleDelayedTask(new ClosureTask(function () use ($player): void {
             $p = ReferMeBro::getInstance()->getPlayerManager()->getPlayer($player);
             if (count($p->getCmds()) !== 0) {
-                foreach (ReferMeBro::getInstance()->getConfig()->getNested("refers.{$p->getRefers()}.commands") as $cmd) {
+                foreach ($p->getCmds() as $cmd) {
                     $server = ReferMeBro::getInstance()->getServer();
                     $server->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), str_replace("{PLAYER}", $p->getUsername(), $cmd));
                 }

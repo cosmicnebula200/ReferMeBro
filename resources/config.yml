@@ -25,6 +25,13 @@ code-size: 8
 
 refers:
   1:
-    commands: []
+    - "give {PLAYER} diamond 64"
+    - "givemoney {PLAYER} 2000"
   5:
-    commands: []
+    - "give {PLAYER} diamond_block 32"
+    - "givemoney {PLAYER} 5000"
+
+# commands executed for the player who executed
+refer-use:
+  - "give {PLAYER} diamonds 64"
+  - "say {PLAYER} has used a referral code, check yours by using the '/refer' command"

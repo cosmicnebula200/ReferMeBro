@@ -45,9 +45,10 @@ class Utils
 
                 ReferMeBro::getInstance()->getPlayerManager()->loadPlayerFromCode($code);
                 $pPlayer = ReferMeBro::getInstance()->getServer()->getPlayerByPrefix($p->getUsername());
+
                 if ($pPlayer instanceof P)
                 {
-                    foreach(ReferMeBro::getInstance()->getConfig()->getNested("refers.$newRefers.commands") as $cmd)
+                    foreach(ReferMeBro::getInstance()->getConfig()->getNested("refers.$newRefers") as $cmd)
                     {
                         $server = ReferMeBro::getInstance()->getServer();
                         $server->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), str_replace("{PLAYER}", $p->getUsername(), $cmd));
@@ -56,7 +57,13 @@ class Utils
                         "refers" => $newRefers
                     ]));
                 } else {
-                    $p->setCmds(ReferMeBro::getInstance()->getConfig()->getNested("refers.$newRefers.commands"));
+                    $p->setCmds(ReferMeBro::getInstance()->getConfig()->getNested("refers.$newRefers"));
+                }
+
+                foreach (ReferMeBro::getInstance()->getConfig()->get("refer-use") as $cmd)
+                {
+                    $server = ReferMeBro::getInstance()->getServer();
+                    $server->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), str_replace("{PLAYER}", $pl->getUsername(), $cmd));
                 }
             }), 20);
         });
