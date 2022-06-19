@@ -25,7 +25,8 @@ class PlayerManager
                     $this->createPlayer($player);
                     return;
                 }
-                $this->players[$rows[0]['name']] = new Player($rows[0]['uuid'] , $rows[0]['name'], $rows[0]['referral'], (array)json_decode($rows[0]['cmds']), (bool)$rows[0]['referred'], $rows[0]['refers']);
+                $name = $player->getName();
+                $this->players[$name] = new Player($rows[0]['uuid'] , $rows[0]['name'], $rows[0]['referral'], (array)json_decode($rows[0]['cmds']), (bool)$rows[0]['referred'], $rows[0]['refers']);
             }
         );
     }
