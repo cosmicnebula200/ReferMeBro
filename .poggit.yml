@@ -6,7 +6,7 @@ projects:
   ReferMeBro:
     path: ""
     libs:
-      - src: ACM-Pocketmine-MP/CortexPE/Commando
+      - src: ACM-Pocketmine-MP/Commando/Commando
         version:  ^3.2.1
       - src: poggit/libasynql/libasynql
         version: ^4.2.0
