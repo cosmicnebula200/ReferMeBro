@@ -6,13 +6,13 @@ projects:
   ReferMeBro:
     path: ""
     libs:
-      - src: CortexPE/Commando/Commando
-        version:  ^3.0.0
-        branch: PM4
+      - src: ACM-Pocketmine-MP/CortexPE/Commando
+        version:  ^3.2.1
       - src: poggit/libasynql/libasynql
-        version: ^3.4.0
+        version: ^4.2.0
       - src: muqsit/simplepackethandler/SimplePacketHandler
-        version: ^0.0.1
+        version: ^0.1.3
+        branch: pm5
       - src: Vecnavium/FormsUI/FormsUI
-        version: ^1.1.2
+        version: ^1.1.3
 ...
